@@ -1,0 +1,75 @@
+.tudo {
+    width: 562px;
+    height: 459px;
+    margin-bottom: 300px;
+}
+
+.filtro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.filtro p {
+    color: #212529;
+    width: 137px;
+    height: 30px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.filtro button {
+    margin: 0;
+    width: 69px;
+    height: 40px;
+    margin-left: 143px;
+}
+
+.lista {
+    width: 562px;
+    height: 331px;
+}
+
+.verde {
+    border-left: 2px #03B898 solid;
+    display: flex;
+    width: 560px;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.grey {
+    display: flex;
+    width: 560px;
+    justify-content: space-between;
+    border-left: 2px #E9ECEF solid;
+    margin-bottom: 32px;
+}
+
+.p3 {
+    color: #212529;
+    height: 39px;
+    margin: 0px;
+    margin-left: 16px;
+    align-items: left;
+    font-size: 16px;
+    width: auto;
+    margin-top: 8px;
+}
+
+.p4{
+    width: 62px;
+    height: 27px;
+    color: #868E96;
+    font-size: 12px;
+}
+
+.pvalorA {
+    width: 102px;
+    height: 22px;
+    color: #212529;
+    font-size: 12px;
+}
+

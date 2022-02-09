@@ -1,0 +1,91 @@
+.form {
+   width: 363px;
+   height: 351px;
+   background-color: #FFF;
+   border: 1px solid #E9ECEF;
+   box-sizing: border-box;
+   border-radius: 4px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.input1 {
+    width: 314px;
+    height: 52px;
+    margin-left: 25px;
+    border: none;
+}
+
+.pDescricao{
+    margin-top: 28px;
+    color: black;
+    width: 57px;
+    height: 22px;
+    margin-left: 25px;
+    font-size: 12px;
+}
+
+.pEx {
+    color: #868E96;
+    margin-top: 0px;
+    margin-left: 25px;
+    font-size: 12px;
+    width: 126px;
+    height: 20px;
+}
+
+p {
+    margin-left: 25px;
+    color: black;
+    font-size: 12px;
+}
+
+.valores {
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+
+button {
+    background-color: #FD377E;
+    width: 314px;
+    height: 48px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    margin-left: 25px;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.input2 {
+    width: 128px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #F8F9FA;
+    border: none;
+    margin-left: 25px;
+}
+
+select {
+    margin-bottom: 12px;
+    margin-left: 36px;
+    margin-right: 24px;
+    color: #868E96;
+    width: 150px;
+    height: 48px;
+    border: none;
+    background-color: #F8F9FA;
+}
+
+.pValor {
+    text-align: left;
+}
+
+.pValor p {
+    height: 22px;
+    color: #212529;
+    font-size: 12px;
+}

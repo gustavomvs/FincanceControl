@@ -1,0 +1,32 @@
+.valorT {
+    display: flex;
+    justify-content: space-between;
+    width: 363px;
+    height: 96px;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.paragrafos {
+    margin-left: 24px;
+}
+
+.valor {
+    margin-right: 24px;
+    color: #FD377E;
+    font-size: 16px;
+}
+
+.p1 {
+    color: #212529;
+    width: 84px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.p2 {
+    color: #868E96;
+    width: 155px;
+    height: 22px;
+    font-size: 12px;
+}
