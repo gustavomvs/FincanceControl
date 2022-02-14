@@ -10,13 +10,15 @@ function Form({ listTransactions , setListTransactions}) {
   const [colocarId, setColocarId] = useState(0)
 
   function atualizarLista(){
-    setColocarId(colocarId + 1)
-    setListTransactions([
-      ...listTransactions,
-      { description: descricao, type: tipo, value: valor, id: colocarId},
-    ]);
-    setdescricao("")
-    setValor("")
+    if(descricao !== "" && valor !== 0){
+      setColocarId(colocarId + 1)
+      setListTransactions([
+        ...listTransactions,
+        { description: descricao, type: tipo, value: valor, id: colocarId},
+      ]);
+      setdescricao("")
+      setValor("")
+    }
   }
 
   return (
