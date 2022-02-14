@@ -44,27 +44,30 @@ table {
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-header {
+.App-div {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	height: 100vh;
-}
-
-.formzinho {
-	margin-bottom: 300px;
-	margin-right: 300px;
-}
-
-.listaDeItens {
-	margin-right: 100px;
-}
-
-.logozinho {
-	margin-top: 26px;
-	margin-left: 261px;
+	flex-wrap: wrap;
 }
 
 .App {
-	font-family: 'Nunito'
+	font-family: 'Nunito';
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.formizinho {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (max-width: 600px){
+	.listaDeItens{
+		display: flex;
+		justify-content: center;
+	}
 }

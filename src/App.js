@@ -1,28 +1,44 @@
-import './App.css';
-import { useState } from 'react'
-import React from 'react';
-import Form from './components/Form/Form';
-import List from './components/List/index'
-import Valor from './components/Valor';
-import Header from './components/header';
+import "./App.css";
+import { useImperativeHandle, useState } from "react";
+import React from "react";
+import Form from "./components/Form/Form";
+import List from "./components/List/index";
+import Valor from "./components/Valor";
+import Header from "./components/header";
+import Inicio from "./components/Inicio";
 
 function App() {
   const [listTransactions, setListTransactions] = useState([]);
-  
+  const [inicio, setInicio] = useState(0);
+
+  function somar(){
+    setInicio(1)
+  }
+
   return (
-    <div className="App">
-        <div className='logozinho'>
-        <Header/>
+    <div>
+      {inicio === 0 ? <Inicio somar={somar}/>
+      :
+      <div>
+        <div className="logozinho">
+          <Header setInicio={setInicio} />
         </div>
-      <header className="App-header">
-        <div className='formzinho'>
-        <Form listTransactions={listTransactions} setListTransactions={setListTransactions} />
-        <Valor listTransactions={listTransactions}/>
+        <div className="App-div App">
+          <div className="formizinho">
+            <Form
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+              />
+            <Valor listTransactions={listTransactions} />
+          </div>
+          <div className="listaDeItens">
+            <List
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+              />
+          </div>
         </div>
-        <div className='listaDeItens'>
-        <List listTransactions={listTransactions}/>
-        </div>
-      </header>
+      </div>}
     </div>
   );
 }

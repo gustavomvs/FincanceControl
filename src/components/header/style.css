@@ -1,0 +1,33 @@
+.cab {
+  background-color: #f8f9fa;
+  margin-bottom: 39px;
+  height: 88px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-box-shadow: 5px -1px 32px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px -1px 32px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px -1px 32px -13px rgba(0, 0, 0, 0.75);
+}
+
+.cabimg {
+  width: 122px;
+  height: 20px;
+}
+
+.cabBu {
+  width: 64px;
+  height: 40px;
+  background-color: #e9ecef;
+  color: #868e96;
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .cab{
+    box-shadow: none
+  }
+}

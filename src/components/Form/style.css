@@ -8,9 +8,12 @@
    display: flex;
    flex-direction: column;
    justify-content: space-around;
+   margin-right: 58px;
 }
 
 .input1 {
+    background-color: #F8F9FA;
+    outline: none;
     width: 314px;
     height: 52px;
     margin-left: 25px;
@@ -35,7 +38,7 @@
     height: 20px;
 }
 
-p {
+.p6 {
     margin-left: 25px;
     color: black;
     font-size: 12px;
@@ -48,7 +51,8 @@ p {
 }
 
 
-button {
+.atualizarLista {
+    cursor: pointer;
     background-color: #FD377E;
     width: 314px;
     height: 48px;
@@ -61,6 +65,7 @@ button {
 }
 
 .input2 {
+    outline: none;
     width: 128px;
     height: 48px;
     border-radius: 8px;
@@ -78,6 +83,7 @@ select {
     height: 48px;
     border: none;
     background-color: #F8F9FA;
+    outline: none;
 }
 
 .pValor {
@@ -88,4 +94,47 @@ select {
     height: 22px;
     color: #212529;
     font-size: 12px;
+}
+
+.teste {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px){
+    .form{
+        width: 300px;
+        margin: 0;
+    }
+
+    .input1 {
+        width: 250px;
+    }
+
+    .input2 {
+        width: 80px;
+        margin: 0px;
+        margin-left: 3px;
+    }
+
+    .select {
+        width: 80px;
+    }
+
+    .valores {
+        justify-content: space-around;
+    }
+
+    .atualizarLista {
+        width: 200px;
+        margin: 0;
+    }
+
+    .p6{
+        margin: 0;
+    }
+
+    .form {
+        margin-bottom: 20px;
+    }
 }
