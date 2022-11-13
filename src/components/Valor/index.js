@@ -12,7 +12,7 @@ function Valor({ listTransactions }) {
         <div className="valorT">
           <div className="paragrafos">
             <p className="p1">Valor total:</p>
-            <p className="p2">O valor se refere as entradas</p>
+            <p className="p2">O valor se refere as entradas e saídas</p>
           </div>
           <div className="valor">$ {totalDaConta}</div>
         </div>
