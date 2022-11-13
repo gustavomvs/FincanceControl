@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./style.css";
 
 function Valor({ listTransactions }) {
-  const totalDaConta = listTransactions.reduce((a,b) => {
-    return (b.type === "entrada" ? a + Number(b.value) : a - Number(b.value))
-  },0);
+  const totalDaConta = listTransactions.reduce((a, b) => {
+    return b.type === "entrada" ? a + Number(b.value) : a - Number(b.value);
+  }, 0);
 
   return (
     <div>
@@ -12,7 +12,7 @@ function Valor({ listTransactions }) {
         <div className="valorT">
           <div className="paragrafos">
             <p className="p1">Valor total:</p>
-            <p className="p2">O valor se refere as entradas e saídas</p>
+            <p className="p2">O valor se refere ao total.</p>
           </div>
           <div className="valor">$ {totalDaConta}</div>
         </div>

@@ -6,12 +6,12 @@ function Inicio({ somar }) {
   return (
     <div className="margem">
       <div className="menuComBotao" >
-        <img className="inicioImg" src={imagem2} />
+        <img className="inicioImg" alt="img" src={imagem2} />
         <h1 className="titulo">Centralize o controle das suas finanças</h1>
         <p className="menup">de forma rápida e segura</p>
         <button className="menub" onClick={somar}>Iniciar</button>
       </div>
-        <img className="logoGigante" src={imagem} />
+        <img className="logoGigante" alt="img" src={imagem} />
     </div>
   );
 }
