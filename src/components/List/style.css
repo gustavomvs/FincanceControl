@@ -1,194 +1,204 @@
 .tudo {
-    width: auto;
-    height: 459px;
-    margin-bottom: 300px;
+  width: auto;
+  height: 459px;
+  margin-bottom: 300px;
 }
 
 .filtro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+li {
+  list-style-type: none;
 }
 
 .p5 {
-    color: #212529;
-    width: 137px;
-    height: 30px;
-    font-size: 16px;
-    margin: 0;
-    font-style: bold;
-    font-weight: 700;
-    width: auto;
-    margin-top: 10px;
+  color: #212529;
+  width: 137px;
+  height: 30px;
+  font-size: 16px;
+  margin: 0;
+  font-style: bold;
+  font-weight: 700;
+  width: auto;
+  margin-top: 10px;
 }
 
 .fb {
-    background-color: #E9ECEF;
-    border: none;
-    border-radius: 8px;
-    color: #868E96;
-    width: 69px;
-    height: 40px;
-    padding: 10px;
-    margin: 0px 8px;
-    cursor: pointer;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 8px;
+  color: #868e96;
+  width: 69px;
+  height: 40px;
+  padding: 10px;
+  margin: 0px 8px;
+  cursor: pointer;
 }
 
-.fb:focus{
-    background-color: #FD377E;
-    color: #fff;
+.fb:focus {
+  background-color: #fd377e;
+  color: #fff;
 }
 
 .lista {
-    width: 562px;
-    height: 331px;
+  width: 562px;
+  height: 331px;
 }
 
 .verde {
-    border-left: 4px #03B898 solid;
-    display: flex;
-    width: 560px;
-    justify-content: space-between;
-    margin-bottom: 32px;
-    border-radius: 4px;
+  border-left: 4px #03b898 solid;
+  display: flex;
+  width: 560px;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  height: 100%;
 }
 
 .grey {
-    display: flex;
-    width: 560px;
-    justify-content: space-between;
-    border-left: 4px #E9ECEF solid;
-    margin-bottom: 32px;
+  border-left: 4px grey solid;
+  display: flex;
+  width: 560px;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  height: 100%;
 }
 
 .p3 {
-    color: #212529;
-    height: 39px;
-    margin: 0px;
-    margin-left: 16px;
-    align-items: left;
-    font-size: 16px;
-    width: auto;
-    margin-top: 8px;
-    font-weight: 700;
+  color: #212529;
+  height: 39px;
+  margin: 0px;
+  margin-left: 16px;
+  align-items: left;
+  font-size: 16px;
+  width: auto;
+  margin-top: 8px;
+  font-weight: 700;
 }
 
-.p4{
-    width: 62px;
-    height: 27px;
-    color: #868E96;
-    font-size: 12px;
-    margin: 0;
-    margin-left: 16px;
-    font-weight: 400;
+.p4 {
+  width: 62px;
+  height: 27px;
+  color: #868e96;
+  font-size: 12px;
+  margin: 0;
+  margin-left: 16px;
+  font-weight: 400;
 }
 
 .pvalorA {
-    margin-top: 18px;
-    width: 102px;
-    height: 22px;
-    color: #212529;
-    font-size: 12px;
+  margin-top: 18px;
+  width: 102px;
+  height: 22px;
+  color: #212529;
+  font-size: 12px;
 }
 
 .naopossui {
-    color: #868E96;
-    font-size: 22px;
-    font-weight: 700;
-    font-style: bold;
+  color: #868e96;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: bold;
 }
 
 .cardVazio {
-    background-color: #F8F9FA;
-    width: 562px;
-    height: 87px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border-radius: 4px;
-    margin-top: 30px;
-    border-left: 2px solid #E9ECEF;
+  background-color: #f8f9fa;
+  width: 562px;
+  height: 87px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  margin-top: 30px;
+  border-left: 2px solid #e9ecef;
 }
 
 .fundo1 {
-    margin-left: 11px;
-    width: 330px;
-    height: 13px;
-    background-color: #E9ECEF;
+  margin-left: 11px;
+  width: 330px;
+  height: 13px;
+  background-color: #e9ecef;
 }
 
 .fundo2 {
-    margin-left: 11px;
-    background-color: #E9ECEF;
-    width: 76px;
-    height: 13px;
+  margin-left: 11px;
+  background-color: #e9ecef;
+  width: 76px;
+  height: 13px;
 }
 
 .li {
-    margin-bottom: 18px;
-    height: 87px;
-    background-color: #F8F9FA;
-    border-radius: 4px;
+  margin-bottom: 18px;
+  height: 87px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
 }
 
 .li:hover {
-    background-color: #FFF;
-    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
 }
 
 .lixao {
-    width: 22px;
-    height: 22px;
-    color: #E9ECEF;
-    border-radius: 2.5px;
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
+  width: 22px;
+  height: 22px;
+  color: #e9ecef;
+  border-radius: 2.5px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.lixao:hover{
-    background-color: #868E96;
+.lixao:hover {
+  background-color: #868e96;
 }
 
-.lixao:hover img{
-    filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%);
+.lixao:hover img {
+  filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%)
+    contrast(80%);
 }
 
 .lixinho {
+  display: flex;
+  width: 151px;
+}
+
+@media (max-width: 600px) {
+  .lista,
+  .verde,
+  .grey {
+    width: 300px;
+  }
+  .cardVazio {
+    width: 300px;
+  }
+
+  .formzinho {
+    width: 300px;
+  }
+
+  .fundo1 {
+    width: 200px;
+  }
+
+  .tudo {
     display: flex;
-    width: 151px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-@media (max-width: 600px){
-    .lista, .verde, .grey {
-        width: 300px;
-    }
-    .cardVazio{
-        width: 300px;
-    }
-
-    .formzinho {
-        width: 300px;
-    }
-
-    .fundo1 {
-        width: 200px;
-    }
-
-    .tudo {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 400px){
-    .p5{
-        margin-left: 10px;
-    }
+@media (max-width: 400px) {
+  .p5 {
+    margin-left: 10px;
+  }
 }

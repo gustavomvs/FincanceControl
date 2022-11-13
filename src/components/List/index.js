@@ -3,6 +3,11 @@ import lixo from "../../imagem/trash.svg";
 import { useState } from "react";
 
 function List({ listTransactions, setListTransactions }) {
+  const [type, setType] = useState("Todos");
+
+  const [entrace, setEntrace] = useState([]);
+  const [exit, setExit] = useState([]);
+
   function excluir(index) {
     const copiaList = [...listTransactions];
     listTransactions.map((e, idx) => {
@@ -14,23 +19,26 @@ function List({ listTransactions, setListTransactions }) {
   }
 
   function todos() {
+    setType("Todos");
     setListTransactions([...listTransactions]);
   }
 
-  function entradas(){
+  function entradas() {
+    setType("Entradas");
     const copiaList = [...listTransactions];
     const copiaListEntrada = copiaList.filter(
       (produto) => produto.type === "entrada"
     );
-    setListTransactions(copiaListEntrada);
+    setEntrace(copiaListEntrada);
   }
 
   function saidas() {
+    setType("Saidas");
     const copiaList = [...listTransactions];
     const copiaListSaidas = copiaList.filter(
       (produto) => produto.type === "saida"
     );
-    setListTransactions(copiaListSaidas);
+    setExit(copiaListSaidas);
   }
 
   return (
@@ -49,65 +57,141 @@ function List({ listTransactions, setListTransactions }) {
           </button>
         </div>
       </div>
-      <ul className="lista">
-        {listTransactions.length === 0 ? (
-          <div>
-            <div className="naopossui">
-              Você ainda não possui nenhum lançamento
+      {type === "Todos" ? (
+        <ul className="lista">
+          {listTransactions.length === 0 ? (
+            <div>
+              <div className="naopossui">
+                Você ainda não possui nenhum lançamento
+              </div>
+              <div className="cardVazio">
+                {" "}
+                <p className="fundo1"></p> <p className="fundo2"></p>{" "}
+              </div>
+              <div className="cardVazio">
+                {" "}
+                <p className="fundo1"></p> <p className="fundo2"></p>{" "}
+              </div>
+              <div className="cardVazio">
+                {" "}
+                <p className="fundo1"></p> <p className="fundo2"></p>{" "}
+              </div>
             </div>
-            <div className="cardVazio">
-              {" "}
-              <p className="fundo1"></p> <p className="fundo2"></p>{" "}
-            </div>
-            <div className="cardVazio">
-              {" "}
-              <p className="fundo1"></p> <p className="fundo2"></p>{" "}
-            </div>
-            <div className="cardVazio">
-              {" "}
-              <p className="fundo1"></p> <p className="fundo2"></p>{" "}
-            </div>
-          </div>
-        ) : (
-          <div>
-            {listTransactions.map((e, i) => (
-              <li id={e.id} className="li" key={i}>
-                {e.type === "entrada" ? (
-                  <div className="verde">
-                    <div>
-                      <p className="p3">{e.description}</p> <br></br>
-                      <p className="p4">{e.type}</p>
+          ) : (
+            <div>
+              {listTransactions.map((e, i) => (
+                <li id={e.id} className="li" key={i}>
+                  {e.type === "entrada" ? (
+                    <div className="verde">
+                      <div>
+                        <p className="p3">{e.description}</p> <br></br>
+                        <p className="p4">{e.type}</p>
+                      </div>
+                      <div className="lixinho">
+                        <p className="pvalorA">
+                          R$ {Number(e.value).toFixed(2)}
+                        </p>
+                        <button className="lixao" onClick={() => excluir(i)}>
+                          <img src={lixo} alt="img" />
+                        </button>
+                      </div>
                     </div>
-                    <div className="lixinho">
-                      <p className="pvalorA">R$ {Number(e.value).toFixed(2)}</p>
-                      <button className="lixao" onClick={() => excluir(i)}>
-                        <img src={lixo} />
-                      </button>
+                  ) : (
+                    <div className="grey">
+                      <div>
+                        <p className="p3">
+                          {e.description} <br></br>
+                        </p>
+                        <p className="p4">{e.type}</p>
+                      </div>
+                      <div className="lixinho">
+                        <p className="pvalorA">
+                          R$ -{Number(e.value).toFixed(2)}
+                        </p>
+                        <button className="lixao" onClick={() => excluir(i)}>
+                          <img src={lixo} alt="img" />
+                        </button>
+                      </div>
                     </div>
+                  )}
+                </li>
+              ))}
+            </div>
+          )}
+        </ul>
+      ) : type === "Entradas" ? (
+        <div>
+          {entrace.map((e, i) => (
+            <li id={e.id} className="li" key={i}>
+              {e.type === "entrada" ? (
+                <div className="verde">
+                  <div>
+                    <p className="p3">{e.description}</p> <br></br>
+                    <p className="p4">{e.type}</p>
                   </div>
-                ) : (
-                  <div className="grey">
-                    <div>
-                      <p className="p3">
-                        {e.description} <br></br>
-                      </p>
-                      <p className="p4">{e.type}</p>
-                    </div>
-                    <div className="lixinho">
-                      <p className="pvalorA">
-                        R$ -{Number(e.value).toFixed(2)}
-                      </p>
-                      <button className="lixao" onClick={() => excluir(i)}>
-                        <img src={lixo} />
-                      </button>
-                    </div>
+                  <div className="lixinho">
+                    <p className="pvalorA">R$ {Number(e.value).toFixed(2)}</p>
+                    <button className="lixao" onClick={() => excluir(i)}>
+                      <img src={lixo} alt="img" />
+                    </button>
                   </div>
-                )}
-              </li>
-            ))}
-          </div>
-        )}
-      </ul>
+                </div>
+              ) : (
+                <div className="grey">
+                  <div>
+                    <p className="p3">
+                      {e.description} <br></br>
+                    </p>
+                    <p className="p4">{e.type}</p>
+                  </div>
+                  <div className="lixinho">
+                    <p className="pvalorA">R$ -{Number(e.value).toFixed(2)}</p>
+                    <button className="lixao" onClick={() => excluir(i)}>
+                      <img src={lixo} alt="img" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </li>
+          ))}
+        </div>
+      ) : (
+        <div>
+          {exit.map((e, i) => (
+            <li id={e.id} className="li" key={i}>
+              {e.type === "entrada" ? (
+                <div className="verde">
+                  <div>
+                    <p className="p3">{e.description}</p> <br></br>
+                    <p className="p4">{e.type}</p>
+                  </div>
+                  <div className="lixinho">
+                    <p className="pvalorA">R$ {Number(e.value).toFixed(2)}</p>
+                    <button className="lixao" onClick={() => excluir(i)}>
+                      <img src={lixo} alt="img" />
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="grey">
+                  <div>
+                    <p className="p3">
+                      {e.description} <br></br>
+                    </p>
+                    <p className="p4">{e.type}</p>
+                  </div>
+                  <div className="lixinho">
+                    <p className="pvalorA">R$ -{Number(e.value).toFixed(2)}</p>
+                    <button className="lixao" onClick={() => excluir(i)}>
+                      <img src={lixo} alt="img" />
+                    </button>
+                  </div>
+                </div>
+              )}
+            </li>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
