@@ -1,1 +1,1 @@
-https://fincance-controll.vercel.app/
+https://fincance-control.vercel.app/
